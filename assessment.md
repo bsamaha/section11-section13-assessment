@@ -60,7 +60,7 @@ for product in soup.find_all('h3'): #iterate through the soup object to find all
 
 ```python
 df_raw = pd.DataFrame(product_name_list, columns=['productNames']) #raw data df.. need to be examined
-df = df.iloc[:36] #everything good but needed to remove the last two items that were not products
+df = df_raw.iloc[:36] #everything good but needed to remove the last two items that were not products
 df.to_csv('part1.csv', index=False)# save the data as a csv file
 ```
 
@@ -69,13 +69,13 @@ df.to_csv('part1.csv', index=False)# save the data as a csv file
 
     NameError                                 Traceback (most recent call last)
 
-    <ipython-input-5-6557dae5f0c0> in <module>
-          1 df_raw = pd.DataFrame(product_name_list, columns=['productNames']) #raw data df.. need to be examined
-    ----> 2 df = df.iloc[:36] #everything good but needed to remove the last two items that were not products
+    <ipython-input-1-ee6b4401e6da> in <module>
+    ----> 1 df_raw = pd.DataFrame(product_name_list, columns=['productNames']) #raw data df.. need to be examined
+          2 df = df_raw.iloc[:36] #everything good but needed to remove the last two items that were not products
           3 df.to_csv('part1.csv', index=False)# save the data as a csv file
     
 
-    NameError: name 'df' is not defined
+    NameError: name 'pd' is not defined
 
 
 
